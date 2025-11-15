@@ -45,6 +45,11 @@
     flex-wrap: wrap;
   }
   
+  #goal-section label {
+    white-space: nowrap;
+    font-size: 16px;
+  }
+  
   #goal-section input {
     width: 120px;
     height: 32px;
@@ -97,7 +102,7 @@
   
   .item {
     display: grid;
-    grid-template-columns: 24px 1fr 80px 80px 100px 80px;
+    grid-template-columns: 20px 1fr 50px 60px 60px 32px;
     align-items: center;
     gap: 8px;
     padding: 8px;
@@ -117,18 +122,26 @@
     padding: 4px;
   }
   
+  .item input[type="text"] {
+    font-size: 16px;
+  }
+  
   .item .subtotal {
     text-align: right;
     font-variant-numeric: tabular-nums;
     color: var(--muted);
+    font-size: 16px;
   }
   
   .item .remove {
     height: 32px;
+    font-size: 14px;
     border: 1px solid var(--border);
     border-radius: 6px;
     background: #fff;
     cursor: pointer;
+    padding: 0;
+    text-align: center;
   }
   
   #total-section {
@@ -184,21 +197,37 @@
     }
   
     #goal-section {
-      flex-direction: column;
-      align-items: stretch;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+  
+    #goal-section label {
+      white-space: nowrap;
+      font-size: 14px;
+    }
+  
+    #goal-section input {
+      flex: 1;
+      min-width: 0;
+      font-size: 14px;
+    }
+  
+    #goal-section button {
+      font-size: 14px;
+      padding: 4px 8px;
     }
   
     .item {
       display: grid;
-      grid-template-columns: 20px 1fr 60px 60px 60px 40px;
+      grid-template-columns: 20px 1fr 50px 60px 60px 32px;
       align-items: center;
       gap: 4px;
-      padding: 8px;
+      padding: 4px 8px;
     }
   
     .item input,
     .item button {
-      font-size: 14px;
+      font-size: 13px;
       padding: 4px;
     }
   
@@ -207,14 +236,20 @@
       height: 28px;
     }
   
+    .item input[type="text"] {
+      font-size: 13px;
+    }
+  
     .item .subtotal {
-      font-size: 14px;
+      font-size: 13px;
+      text-align: right;
     }
   
     .item .remove {
       height: 28px;
-      font-size: 12px;
-      padding: 0 4px;
+      font-size: 13px;
+      padding: 0;
+      text-align: center;
     }
   }
   
