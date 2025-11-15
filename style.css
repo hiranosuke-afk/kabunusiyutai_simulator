@@ -10,13 +10,18 @@
     --match: #e8f5e9;
   }
   
-  * { box-sizing: border-box; }
+  * {
+    box-sizing: border-box;
+  }
   
   body {
     margin: 0;
-    font-family: system-ui, "Noto Sans JP", sans-serif;
+    padding: 0;
+    font-family: sans-serif;
     background: var(--bg);
     color: var(--text);
+    max-width: 100%;
+    overflow-x: hidden;
   }
   
   header {
@@ -37,6 +42,7 @@
     gap: 8px;
     align-items: center;
     margin-bottom: 16px;
+    flex-wrap: wrap;
   }
   
   #goal-section input {
@@ -61,9 +67,11 @@
     padding: 12px;
     border: 1px solid var(--border);
     border-radius: 8px;
+    margin-bottom: 16px;
   }
   
-  form input, form button {
+  form input,
+  form button {
     height: 40px;
     font-size: 16px;
     padding: 8px;
@@ -131,19 +139,15 @@
     background: var(--card);
   }
   
-  .total-row, .diff-row {
-    display: flex;
-    justify-content: space-between;
-    font-size: 18px;
-    margin-bottom: 8px;
-  }
+  .total-row,
+  .diff-row,
   .goal-row {
     display: flex;
     justify-content: space-between;
     font-size: 18px;
     margin-bottom: 8px;
   }
-
+  
   footer.support {
     margin-top: 32px;
     padding: 16px;
@@ -154,23 +158,55 @@
   
   footer.support img {
     margin: 8px 0;
+    max-width: 100%;
+    height: auto;
   }
   
   footer.support a {
     color: var(--accent);
     text-decoration: none;
   }
-
-  #total-section.over { background: var(--over); }
-  #total-section.under { background: var(--under); }
-  #total-section.match { background: var(--match); }
   
+  #total-section.over {
+    background: var(--over);
+  }
+  #total-section.under {
+    background: var(--under);
+  }
+  #total-section.match {
+    background: var(--match);
+  }
+  
+  /* ✅ スマホ対応（iPhone SE含む） */
   @media (max-width: 480px) {
+    form#item-form {
+      grid-template-columns: 1fr;
+    }
+  
+    #goal-section {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
     .item {
-      grid-template-columns: 24px 1fr 1fr;
-      grid-template-rows: auto auto;
-      grid-auto-flow: row;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 4px;
+      padding: 8px;
+    }
+  
+    .item input,
+    .item button {
+      width: 100%;
+    }
+  
+    .total-row,
+    .diff-row,
+    .goal-row {
+      font-size: 16px;
+      flex-direction: row;
+      justify-content: space-between;
     }
   }
- 
   
