@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>優待券お買い物シミュレーター</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>優待券お買い物シミュレーター</h1>
+  </header>
+
+  <main>
+    <section id="goal-section">
+      <label for="goal">目標金額：</label>
+      <input type="number" id="goal" placeholder="例：3000" min="0" />
+      <!-- <button id="toggle-view">選択商品のみ表示</button> -->
+    </section>
+
+    <form id="item-form">
+      <input type="text" id="name" placeholder="商品名" required />
+      <input type="number" id="price" placeholder="単価" min="0" step="1" required inputmode="numeric" />
+      <button type="submit">追加</button>
+    </form>
+
+    <section id="list-section">
+      <ul id="item-list"></ul>
+    </section>
+
+    <section id="total-section">
+        <div class="goal-row">
+          <span>目標金額：</span>
+          <strong id="goal-display">0</strong>
+        </div>
+        <div class="total-row">
+          <span>選択合計：</span>
+          <strong id="total">0</strong>
+        </div>
+        <div class="diff-row">
+          <span>差額：</span>
+          <strong id="diff">0</strong>
+        </div>
+    </section>
+  </main>
+
+  <!--
+  <footer class="support">
+    <hr />
+    <p>このツールが役に立ったら、よかったら応援してくれると嬉しいです🦊</p>
+    <p>PayPayで応援 → <strong>@yourpaypayid</strong> を検索して送ってください</p>
+    <p><a href="https://www.buymeacoffee.com/yourname" target="_blank">Buy Me a Coffee</a></p>
+  </footer>
+  -->
+
+  <script src="script.js"></script>
+</body>
+</html>
