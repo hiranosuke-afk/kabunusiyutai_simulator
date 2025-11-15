@@ -59,7 +59,7 @@
   
   #goal-section button {
     height: 32px;
-    font-size: 14px;
+    font-size: 16px;
     padding: 4px 8px;
     cursor: pointer;
   }
@@ -135,7 +135,7 @@
   
   .item .remove {
     height: 32px;
-    font-size: 14px;
+    font-size: 16px;
     border: 1px solid var(--border);
     border-radius: 6px;
     background: #fff;
@@ -192,7 +192,14 @@
   
   /* ✅ スマホ対応（iPhone SE含む） */
   @media (max-width: 480px) {
-    /* 商品追加フォームを1行に */
+    body {
+      overflow-x: hidden;
+    }
+  
+    main {
+      padding: 0 8px;
+    }
+  
     form#item-form {
       display: grid;
       grid-template-columns: 1fr 60px 60px;
@@ -202,47 +209,45 @@
     form#item-form input[type="text"],
     form#item-form input[type="number"],
     form#item-form button {
-      font-size: 14px;
+      font-size: 16px; /* ← ズーム防止のため16px以上 */
       padding: 4px;
       height: 32px;
     }
   
-    /* 目標金額欄を横並びに */
     #goal-section {
       flex-wrap: nowrap;
       justify-content: space-between;
+      gap: 4px;
     }
   
     #goal-section label {
       white-space: nowrap;
-      font-size: 14px;
+      font-size: 16px;
     }
   
     #goal-section input {
-      flex: 1;
-      min-width: 0;
-      font-size: 14px;
+      font-size: 16px;
       height: 32px;
+      width: 100px;
     }
   
     #goal-section button {
-      font-size: 14px;
-      padding: 4px 8px;
+      font-size: 16px;
       height: 32px;
+      padding: 4px 6px;
     }
   
-    /* 商品リストを1行に収める */
     .item {
       display: grid;
       grid-template-columns: 20px 1fr 50px 60px 60px 32px;
       align-items: center;
       gap: 4px;
-      padding: 4px 8px;
+      padding: 4px;
     }
   
     .item input,
     .item button {
-      font-size: 13px;
+      font-size: 16px;
       padding: 4px;
     }
   
@@ -252,17 +257,17 @@
     }
   
     .item input[type="text"] {
-      font-size: 13px;
+      font-size: 16px;
     }
   
     .item .subtotal {
-      font-size: 13px;
+      font-size: 16px;
       text-align: right;
     }
   
     .item .remove {
       height: 28px;
-      font-size: 13px;
+      font-size: 16px;
       padding: 0;
       text-align: center;
     }
