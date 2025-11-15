@@ -192,28 +192,22 @@
   
   /* ✅ スマホ対応（iPhone SE含む） */
   @media (max-width: 480px) {
+    /* 商品追加フォームを1行に */
     form#item-form {
       display: grid;
       grid-template-columns: 1fr 60px 60px;
       gap: 4px;
     }
   
-    form#item-form input[type="text"] {
-      font-size: 14px;
-      padding: 4px;
-    }
-  
-    form#item-form input[type="number"] {
-      font-size: 14px;
-      padding: 4px;
-    }
-  
+    form#item-form input[type="text"],
+    form#item-form input[type="number"],
     form#item-form button {
       font-size: 14px;
       padding: 4px;
+      height: 32px;
     }
-
   
+    /* 目標金額欄を横並びに */
     #goal-section {
       flex-wrap: nowrap;
       justify-content: space-between;
@@ -228,13 +222,16 @@
       flex: 1;
       min-width: 0;
       font-size: 14px;
+      height: 32px;
     }
   
     #goal-section button {
       font-size: 14px;
       padding: 4px 8px;
+      height: 32px;
     }
   
+    /* 商品リストを1行に収める */
     .item {
       display: grid;
       grid-template-columns: 20px 1fr 50px 60px 60px 32px;
