@@ -193,8 +193,26 @@
   /* ✅ スマホ対応（iPhone SE含む） */
   @media (max-width: 480px) {
     form#item-form {
-      grid-template-columns: 1fr;
+      display: grid;
+      grid-template-columns: 1fr 60px 60px;
+      gap: 4px;
     }
+  
+    form#item-form input[type="text"] {
+      font-size: 14px;
+      padding: 4px;
+    }
+  
+    form#item-form input[type="number"] {
+      font-size: 14px;
+      padding: 4px;
+    }
+  
+    form#item-form button {
+      font-size: 14px;
+      padding: 4px;
+    }
+  }
   
     #goal-section {
       flex-wrap: nowrap;
