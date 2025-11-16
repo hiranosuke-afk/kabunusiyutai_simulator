@@ -236,6 +236,8 @@
       display: grid;
       grid-template-columns: 1fr 80px 60px;
       gap: 4px;
+      padding: 4px; /*test*/
+      margin: 4px; /*test*/
     }
   
     form#item-form input[type="text"],
