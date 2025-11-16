@@ -240,6 +240,11 @@
       margin: 4px; /*test*/
     }
   
+    form#item-form input[type="text"] {
+      min-width: 0;
+    }
+    
+
     form#item-form input[type="text"],
     form#item-form input[type="number"],
     form#item-form button {
